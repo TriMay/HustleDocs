@@ -1,0 +1,23 @@
+on:
+  push:
+    paths:
+      - "docs/**"
+    branches:
+      - "main"
+name: "🚀 FTP Deploy on Push (Main)"
+jobs:
+  web-deploy:
+    name: "🎉 Deploy (Main)"
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.MAIN_FTP_URL }}
+        username: ${{ secrets.MAIN_FTP_USER }}
+        password: ${{ secrets.MAIN_FTP_PASS }}
+        port: ${{ secrets.MAIN_FTP_PORT }}
+        local-dir: "./docs/"
+        server-dir: "./docs/"
