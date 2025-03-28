@@ -47,3 +47,4 @@
     * [CharOptionsPage](codex_mod/class_ref/CharOptionsPage.md)
   * [Contribute (Codex Github)](https://github.com/TriMay/YomiHustleCharCodex)
 * [Credits](credits.md)
+* [Contribute (HustleDocs Githhub)](https://github.com/TriMay/HustleDocs)
