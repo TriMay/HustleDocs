@@ -7,6 +7,7 @@ on:
 name: "🚀 FTP Deploy on Push (Main)"
 jobs:
   web-deploy:
+    if: github.repository == 'TriMay/HustleDocs'
     name: "🎉 Deploy (Main)"
     runs-on: ubuntu-latest
     steps:
