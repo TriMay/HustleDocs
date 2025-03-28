@@ -1,0 +1,1 @@
+<p class="warn"><b>Y.O.M.I.Hustle Docs is currently a work in progress.</b>  Check back in a few days, or join our <a href="https://discord.gg/yomimodding">Modding Discord Server</a> if you have questions<br/>or suggest an edit on github</p>

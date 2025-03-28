@@ -1,0 +1,90 @@
+[](../wip.md ':include')
+
+<div id="page_main"></div>
+
+
+<script>
+
+let data = {
+    version: "1.8.23",
+    name: "ParticleEffect",
+    inherits: "Node2D",
+    script_path: "res://fx/ParticleEffect.gd",
+    scene_path: "res://fx/ParticleEffect.tscn",
+    desc: "",
+    signals: [
+    ],
+    constants: [
+        { name:'FPS',
+          type:'int', value:'60',
+                desc:"" },
+    ],
+    properties: [
+        { export:true, name:'free',
+          type:'bool', value:'true',
+                desc:"" },
+        { export:true, name:'one_shot',
+          type:'bool', value:'true',
+                desc:"" },
+        { export:true, name:'lifetime',
+          type:'float', value:'1.0',
+                desc:"" },
+        { export:true, name:'start_enabled',
+          type:'bool', value:'true',
+                desc:"" },
+        { name:'emitting',
+          type:'bool', value:'true',
+                desc:"" },
+        { name:'enabled',
+          type:'bool', value:'true',
+                desc:"" },
+        { name:'tick',
+          type:'int', value:'0',
+                desc:"" },
+        { name:'sounds_played',
+          type:'Dictionary', value:'{}',
+                desc:"" },
+        { onready:true, name:'tick_timer',
+          type:'Node', value:'$Timer',
+                desc:"" },
+    ],
+    methods: [
+        { name:'_ready',
+          params:[],
+                desc:"" },
+        { name:'update_dir',
+          params:[],
+                desc:"" },
+        { name:'on_update_timer_timeout',
+          params:[],
+                desc:"" },
+        { name:'set_speed_scale',
+          params:['speed:float'],
+                desc:"" },
+        { name:'on_tick_timer_timeout',
+          params:[],
+                desc:"" },
+        { name:'start_emitting',
+          params:[],
+                desc:"" },
+        { name:'start',
+          params:[],
+                desc:"" },
+        { name:'stop_emitting',
+          params:[],
+                desc:"" },
+        { name:'tick',
+          params:[],
+                desc:"" },
+        { name:'get_enabled',
+          params:[], type:'bool',
+                desc:"" },
+        { name:'set_enabled',
+          params:['on:bool'],
+                desc:"" },
+    ],
+};
+
+
+    Vue.createApp(ClassDocsComponent, data).mount("#page_main");
+</script>

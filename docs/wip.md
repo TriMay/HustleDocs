@@ -1,0 +1,1 @@
+<p v-if="!(sub_prop?.desc)" class="warn"><b>Y.O.M.I.Hustle Docs is currently a work in progress.</b>  Check back in a few days, or join our <a href="https://discord.gg/yomimodding">Modding Discord Server</a> if you have questions.</p>

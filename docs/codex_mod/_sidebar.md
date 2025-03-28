@@ -1,0 +1,18 @@
+* [Home](/)
+* **Character Codex**
+  * [How To Use Codex](codex_mod/how_to_use.md)
+  * [Codex Examples](codex_mod/examples.md)
+  * [Character Achievements](codex_mod/achievements.md)
+  * [Character Options](codex_mod/options.md)
+  * **Codex API Reference**
+    * [All Codex.gd Functions](codex_mod/class_ref/Codex.gd.md)
+    * [CharCodexLibrary](codex_mod/class_ref/CharCodexLibrary.md)
+    * [CodexData](codex_mod/class_ref/CodexData.md)
+    * [CodexStats](codex_mod/class_ref/CodexStats.md)
+    * [CodexState](codex_mod/class_ref/CodexState.md)
+    * [CodexHitbox](codex_mod/class_ref/CodexHitbox.md)
+    * [CodexAchievementList](codex_mod/class_ref/CodexAchievementList.md)
+    * [CodexAchievement](codex_mod/class_ref/CodexAchievement.md)
+    * [CharOptionsPage](codex_mod/class_ref/CharOptionsPage.md)
+  * [Contribute (Codex Github)](https://github.com/TriMay/YomiHustleCharCodex)
+* [Credits](credits.md)
