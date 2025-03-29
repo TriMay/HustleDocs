@@ -1,9 +1,9 @@
-on:
-  push:
-    paths:
-      - "docs/**"
-    branches:
-      - "main"
+on: ["workflow_dispatch"]
+#  push:
+#    paths:
+#      - "docs/**"
+#    branches:
+#      - "main"
 name: "🚀 FTP Deploy on Push (Main)"
 jobs:
   web-deploy:
