@@ -133,10 +133,10 @@ Alternatively, checking applied_style, in a CharacterState
 ```
 extends CharacterState
 
-func _enter():
+func _frame_0():
     if host.applied_style != null:
         if host.applied_style.get("use_alternate_intro", false):
-            host.change_state("OtherIntro")
+            return "OtherIntro"
 ```
 
 !> **Note:** the input of apply_style, and the applied_style variable, may both be null, or may not contain your modifications if the player does not have Codex installed, thus why the above examples check for both of these cases.
