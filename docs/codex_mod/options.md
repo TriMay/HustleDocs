@@ -130,7 +130,7 @@ func apply_style(style):
 
 Alternatively, checking applied_style, in a CharacterState
 
-```
+```gdscript
 extends CharacterState
 
 func _frame_0():
