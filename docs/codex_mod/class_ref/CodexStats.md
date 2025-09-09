@@ -1,110 +1,212 @@
-<div id="page_main"></div>
+# CodexStats
+- class_name CodexStats
+- extends Reference
 
 
-<script>
-
-let data = {
-    version: "1.9.0",
-    updated: "2024-04-03",
-    name: "CodexStats",
-    inherits: "Reference",
-    script_path: "",
-    scene_path: "",
-    desc: "",
-    signals: [
-    ],
-    constants: [
-    ],
-    properties: [
-        { name:'max_health',
-          type:'int', value:'1000',
-                desc:"" },
-        { name:'air_options',
-          type:'int', value:'2',
-                desc:"" },
-        { name:'lose_option_in_neutral',
-          type:'bool', value:'true',
-                desc:"" },
-        { name:'air_option_bar',
-          type:'bool', value:'false',
-                desc:"" },
-        { name:'air_option_name',
-          type:'String', value:'"Air Options"',
-                desc:"" },
-        { name:'free_cancels',
-          type:'int', value:'2',
-                desc:"" },
-        { name:'damage_taken',
-          type:'float', value:'1.0',
-                desc:"" },
-        { name:'knockback_taken',
-          type:'float', value:'1.0',
-                desc:"" },
-        { name:'di_strength',
-          type:'float', value:'1.0',
-                desc:"" },
-        { name:'gravity',
-          type:'float', value:'0.5',
-                desc:"" },
-        { name:'friction_ground',
-          type:'float', value:'2.5',
-                desc:"" },
-        { name:'friction_air',
-          type:'float', value:'0.2',
-                desc:"" },
-        { name:'max_speed_ground',
-          type:'float', value:'15.0',
-                desc:"" },
-        { name:'max_speed_air',
-          type:'float', value:'13.0',
-                desc:"" },
-        { name:'max_speed_fall',
-          type:'float', value:'8.0',
-                desc:"" },
-        { name:'hurtbox_x',
-          type:'int', value:'0',
-                desc:"" },
-        { name:'hurtbox_y',
-          type:'int', value:'-16',
-                desc:"" },
-        { name:'hurtbox_width',
-          type:'int', value:'14',
-                desc:"" },
-        { name:'hurtbox_height',
-          type:'int', value:'16',
-                desc:"" },
-        { name:'sprite_position',
-          type:'Vector2', value:'Vector2()',
-                desc:"" },
-        { name:'sprite_scale',
-          type:'Vector2', value:'Vector2()',
-                desc:"" },
-        { name:'sprite_texture',
-          type:'Texture', value:'null',
-                desc:"" },
-    ],
-    methods: [
-        { name:'_init',
-          params:['data=null'],
-                desc:"" },
-        { name:'define',
-          params:['data=null'],
-                desc:"" },
-        { name:'duplicate',
-          params:[], type:'CodexStats',
-                desc:"" },
-        { name:'copy_to',
-          params:['copy'],
-                desc:"" },
-        { name:'parse_fighter',
-          params:['char_instance:Fighter'],
-                desc:"" },
-        { name:'parse_dictionary',
-          params:['data:Dictionary'],
-                desc:"" },
-    ],
-};
 
 
-    Vue.createApp(ClassDocsComponent, data).mount("#page_main");
-</script>
+
+---
+## Property Descriptions
+
+### var max_health
+- var max_health : int = 1000
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var air_options
+- var air_options : int = 2
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var lose_option_in_neutral
+- var lose_option_in_neutral : bool = true
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var air_option_bar
+- var air_option_bar : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var air_option_name
+- var air_option_name : String = "Air Options"
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var free_cancels
+- var free_cancels : int = 2
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var damage_taken
+- var damage_taken : float = 1.0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var knockback_taken
+- var knockback_taken : float = 1.0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var di_strength
+- var di_strength : float = 1.0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var gravity
+- var gravity : float = 0.5
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var friction_ground
+- var friction_ground : float = 2.5
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var friction_air
+- var friction_air : float = 0.2
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var max_speed_ground
+- var max_speed_ground : float = 15.0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var max_speed_air
+- var max_speed_air : float = 13.0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var max_speed_fall
+- var max_speed_fall : float = 8.0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var hurtbox_x
+- var hurtbox_x : int = 0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var hurtbox_y
+- var hurtbox_y : int = -16
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var hurtbox_width
+- var hurtbox_width : int = 14
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var hurtbox_height
+- var hurtbox_height : int = 16
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var sprite_position
+- var sprite_position : Vector2 = Vector2()
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var sprite_scale
+- var sprite_scale : Vector2 = Vector2()
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var sprite_texture
+- var sprite_texture : Texture = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+
+---
+## Method Descriptions
+
+### func _init
+- func _init(data=null)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func define
+- func define(data=null)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func duplicate
+- func duplicate() -> CodexStats
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func copy_to
+- func copy_to(copy)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func parse_fighter
+- func parse_fighter(char_instance:Node)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func parse_dictionary
+- func parse_dictionary(data:Dictionary)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+

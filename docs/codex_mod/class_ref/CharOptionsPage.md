@@ -1,86 +1,167 @@
-<div id="page_main"></div>
+# CharOptionsPage
+- class_name CharOptionsPage
+- extends VBoxContainer
 
 
-<script>
-
-let data = {
-    version: "1.9.20",
-    updated: "2024-12-01",
-    name: "CharOptionsPage",
-    inherits: "VBoxContainer",
-    script_path: "",
-    scene_path: "",
-    desc: "",
-    signals: [
-        { name:'data_changed',
-          params:[],
-                desc:"" },
-    ],
-    constants: [
-    ],
-    properties: [
-        { name:'option_values',
-          type:'Dictionary', value:'{}',
-                desc:"" },
-        { name:'tracked_option_nodes',
-          type:'Dictionary', value:'{}',
-                desc:"" },
-        { name:'button_groups',
-          type:'Dictionary', value:'{}',
-                desc:"" },
-    ],
-    methods: [
-        { name:'add_label',
-          params:['label:String', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_seperator',
-          params:['label:String=""', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_toggle',
-          params:['id:String', 'label:String', 'default:bool=false', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_textline',
-          params:['id:String', 'label:String', 'default:String=""', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_number',
-          params:['id:String', 'label:String', 'default:int=0', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_slider',
-          params:['id:String', 'label:String', 'default:int=0', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_dropdown',
-          params:['id:String', 'label:String', 'default=null', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_color',
-          params:['id:String', 'label:String', 'default=null', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_custom_scene',
-          params:['id:String', 'scene', 'default=null', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'add_custom_decor',
-          params:['scene', 'params:Dictionary={}'], type:'Node',
-                desc:"" },
-        { name:'__parse_as_scene',
-          params:['scene'], type:'Node',
-                desc:"" },
-        { name:'__add_tracked_node',
-          params:['id:String', 'node:Node', 'default=null', 'params:Dictionary={}'],
-                desc:"" },
-        { name:'__add_decoration_node',
-          params:['node:Node', 'params:Dictionary={}'],
-                desc:"" },
-        { name:'__get_named_button_group',
-          params:['group_name'], type:'ButtonGroup',
-                desc:"" },
-        { name:'set_value',
-          params:['value'],
-                desc:"" },
-        { name:'get_data',
-          params:[], type:'Variant',
-                desc:"" },
-    ],
-};
 
 
-    Vue.createApp(ClassDocsComponent, data).mount("#page_main");
-</script>
+
+---
+## Property Descriptions
+
+### var option_values
+- var option_values : Dictionary = {}
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var tracked_option_nodes
+- var tracked_option_nodes : Dictionary = {}
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var button_groups
+- var button_groups : Dictionary = {}
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+
+---
+## Method Descriptions
+
+### func _ready
+- func _ready()
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_label
+- func add_label(label:String, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_seperator
+- func add_seperator(label:String="", params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_toggle
+- func add_toggle(id:String, label:String, default:bool=false, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_textline
+- func add_textline(id:String, label:String, default:String="", params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_number
+- func add_number(id:String, label:String, default:int=0, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_slider
+- func add_slider(id:String, label:String, default:int=0, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_dropdown
+- func add_dropdown(id:String, label:String, default=null, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_color
+- func add_color(id:String, label:String, default=null, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_custom_scene
+- func add_custom_scene(id:String, scene, default=null, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_custom_decor
+- func add_custom_decor(scene, params:Dictionary={}) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func __parse_as_scene
+- func __parse_as_scene(scene) -> Node
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func __add_tracked_node
+- func __add_tracked_node(id:String, node:Node, default=null, params:Dictionary={})
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func __add_decoration_node
+- func __add_decoration_node(node:Node, params:Dictionary={})
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func __get_named_button_group
+- func __get_named_button_group(group_name) -> ButtonGroup
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_value
+- func set_value(value)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func get_data
+- func get_data() -> Variant
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+
+---
+## Signal Descriptions
+
+### signal data_changed
+- signal data_changed()
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+

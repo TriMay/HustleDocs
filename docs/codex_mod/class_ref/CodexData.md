@@ -1,128 +1,254 @@
-<div id="page_main"></div>
+# CodexData
+- class_name CodexData
+- extends Reference
 
 
-<script>
-
-let data = {
-    version: "1.9.0",
-    updated: "2024-04-03",
-    name: "CodexData",
-    inherits: "Reference",
-    script_path: "",
-    scene_path: "",
-    desc: "",
-    signals: [
-    ],
-    constants: [
-    ],
-    properties: [
-        { name:'char_path',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'banner',
-          type:'Texture', value:'null',
-                desc:"" },
-        { name:'banner_offset',
-          type:'Vector2', value:'Vector2(32, 32)',
-                desc:"" },
-        { name:'banner_scale',
-          type:'Vector2', value:'Vector2(1, 1)',
-                desc:"" },
-        { name:'banner_rotation',
-          type:'float', value:'0',
-                desc:"" },
-        { name:'title',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'subtitle',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'summary',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'moveset',
-          type:'Dictionary', value:'{}',
-                desc:"" },
-        { name:'stances',
-          type:'Array', value:'[]',
-                desc:"" },
-        { name:'tags',
-          type:'Array', value:'[]',
-                desc:"" },
-        { name:'interrupt_types',
-          type:'Array', value:'[]',
-                desc:"" },
-        { name:'custom_tabs',
-          type:'Array', value:'[]',
-                desc:"" },
-        { name:'stats',
-          type:'CodexStats', value:'null',
-                desc:"" },
-        { name:'has_no_moveset',
-          type:'bool', value:'false',
-                desc:"" },
-        { name:'has_no_stats',
-          type:'bool', value:'false',
-                desc:"" },
-        { name:'character_parsed',
-          type:'Fighter', value:'null',
-                desc:"" },
-        { name:'error',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'codex_handler',
-          type:'Node', value:'null',
-                desc:"" },
-    ],
-    methods: [
-        { name:'_init',
-          params:['char_path:String'],
-                desc:"" },
-        { name:'parse_fighter',
-          params:['char_instance:Node'],
-                desc:"" },
-        { name:'set_title',
-          params:['value:String'],
-                desc:"" },
-        { name:'get_title',
-          params:[], type:'String',
-                desc:"" },
-        { name:'set_summary',
-          params:['value:String'],
-                desc:"" },
-        { name:'get_summary',
-          params:[], type:'String',
-                desc:"" },
-        { name:'set_subtitle',
-          params:['value:String'],
-                desc:"" },
-        { name:'get_subtitle',
-          params:[], type:'String',
-                desc:"" },
-        { name:'add_custom_text_tab',
-          params:['tab_title:String', 'text:String'],
-                desc:"" },
-        { name:'add_custom_scene_tab',
-          params:['tab_title:String', 'scene:PackedScene'],
-                desc:"" },
-        { name:'define_state',
-          params:['name:String', 'data', 'force_new:bool=false'],
-                desc:"" },
-        { name:'tag_moves',
-          params:['tag:String', 'moves'],
-                desc:"" },
-        { name:'load_char_data',
-          params:['key=null', 'default=null'], type:'Variant',
-                desc:"" },
-        { name:'save_char_data',
-          params:['key=null', 'value=null'],
-                desc:"" },
-        { name:'reset_char_data',
-          params:[],
-                desc:"" },
-    ],
-};
 
 
-    Vue.createApp(ClassDocsComponent, data).mount("#page_main");
-</script>
+
+---
+## Property Descriptions
+
+### var char_path
+- var char_path : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var banner
+- var banner : Texture = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var banner_offset
+- var banner_offset : Vector2 = Vector2(32, 32)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var banner_scale
+- var banner_scale : Vector2 = Vector2(1, 1)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var banner_rotation
+- var banner_rotation : float = 0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var title
+- var title : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var subtitle
+- var subtitle : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var summary
+- var summary : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var moveset
+- var moveset : Dictionary = {}
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var stances
+- var stances : Array = []
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var tags
+- var tags : Array = []
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var interrupt_types
+- var interrupt_types : Array = []
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var custom_tabs
+- var custom_tabs : Array = []
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var stats
+- var stats : CodexStats = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var has_no_moveset
+- var has_no_moveset : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var has_no_stats
+- var has_no_stats : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var character_parsed
+- var character_parsed : Fighter = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var error
+- var error : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var codex_handler
+- var codex_handler : Node = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+
+---
+## Method Descriptions
+
+### func _init
+- func _init(char_path:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func parse_fighter
+- func parse_fighter(char_instance:Node)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_title
+- func set_title(value:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func get_title
+- func get_title() -> String
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_summary
+- func set_summary(value:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func get_summary
+- func get_summary() -> String
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_subtitle
+- func set_subtitle(value:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func get_subtitle
+- func get_subtitle() -> String
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_custom_text_tab
+- func add_custom_text_tab(tab_title:String, text:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func add_custom_scene_tab
+- func add_custom_scene_tab(tab_title:String, scene:PackedScene)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func define_state
+- func define_state(name:String, data, force_new:bool=false)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func tag_moves
+- func tag_moves(tag:String, moves)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func load_char_data
+- func load_char_data(key=null, default=null) -> Variant
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func save_char_data
+- func save_char_data(key=null, value=null)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func reset_char_data
+- func reset_char_data()
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+

@@ -1,62 +1,96 @@
-<div id="page_main"></div>
+# CodexAchievement
+- class_name CodexAchievement
+- extends Reference
 
 
-<script>
-
-let data = {
-    version: "1.9.20",
-    updated: "2024-10-07",
-    name: "CodexAchievement",
-    inherits: "Reference",
-    script_path: "",
-    scene_path: "",
-    desc: "",
-    signals: [
-    ],
-    constants: [
-    ],
-    properties: [
-        { name:'title',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'desc',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'icon',
-          type:'Variant', value:'null',
-                desc:"" },
-        { name:'locked_title',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'locked_desc',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'locked_icon',
-          type:'Variant', value:'null',
-                desc:"" },
-        { name:'secret',
-          type:'bool', value:'false',
-                desc:"" },
-        { name:'unlocked',
-          type:'bool', value:'false',
-                desc:"" },
-        { name:'highlight_color',
-          type:'Color', value:'Color(1.0, 1.0, 1.0)',
-                desc:"" },
-        { name:'counter_id',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'counter_target',
-          type:'int', value:'-1',
-                desc:"" },
-        { name:'counter_limit',
-          type:'bool', value:'false',
-                desc:"" },
-    ],
-    methods: [
-    ],
-};
 
 
-    Vue.createApp(ClassDocsComponent, data).mount("#page_main");
-</script>
+
+---
+## Property Descriptions
+
+### var title
+- var title : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var desc
+- var desc : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var icon
+- var icon : Variant = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var locked_title
+- var locked_title : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var locked_desc
+- var locked_desc : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var locked_icon
+- var locked_icon : Variant = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var secret
+- var secret : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var unlocked
+- var unlocked : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var highlight_color
+- var highlight_color : Color = Color(1.0, 1.0, 1.0)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var counter_id
+- var counter_id : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var counter_target
+- var counter_target : int = -1
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var counter_limit
+- var counter_limit : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+

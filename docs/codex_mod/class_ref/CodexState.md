@@ -1,224 +1,478 @@
-<div id="page_main"></div>
+# CodexState
+- class_name CodexState
+- extends Reference
 
 
-<script>
-
-let data = {
-    version: "1.9.0",
-    updated: "2024-04-03",
-    name: "CodexState",
-    inherits: "Reference",
-    script_path: "",
-    scene_path: "",
-    desc: "",
-    signals: [
-    ],
-    constants: [
-    ],
-    properties: [
-        { name:'icon',
-          type:'Texture', value:'null',
-                desc:"" },
-        { name:'title',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'desc',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'visible',
-          type:'bool', value:'true',
-                desc:"" },
-        { name:'visibility_set',
-          type:'bool', value:'false',
-                desc:"" },
-        { name:'type',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'air_type',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'length',
-          type:'int', value:'-1',
-                desc:"" },
-        { name:'endless',
-          type:'bool', value:'false',
-                desc:"" },
-        { name:'iasa',
-          type:'int', value:'-1',
-                desc:"" },
-        { name:'anim_name',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'interrupt_types',
-          type:'Array', value:'[]',
-                desc:"" },
-        { name:'stances',
-          type:'Array', value:'[]',
-                desc:"" },
-        { name:'tags',
-          type:'Array', value:'[]',
-                desc:"" },
-        { name:'change_stance',
-          type:'String', value:'""',
-                desc:"" },
-        { name:'super_req',
-          type:'int', value:'0',
-                desc:"" },
-        { name:'super_cost',
-          type:'int', value:'0',
-                desc:"" },
-        { name:'hitbox_data',
-          type:'Dictionary', value:'{}',
-                desc:"" },
-        { name:'tick_data',
-          type:'Dictionary', value:'{}',
-                desc:"" },
-        { name:'custom_stats',
-          type:'Dictionary', value:'{}',
-                desc:"" },
-    ],
-    methods: [
-        { name:'_init',
-          params:['state=null'],
-                desc:"" },
-        { name:'define',
-          params:['data=null'],
-                desc:"" },
-        { name:'duplicate',
-          params:[], type:'CodexState',
-                desc:"" },
-        { name:'copy_to',
-          params:['copy'],
-                desc:"" },
-        { name:'duplicate_all_hitbox_data',
-          params:[], type:'Dictionary',
-                desc:"" },
-        { name:'parse_state',
-          params:['state:StateInterface'],
-                desc:"" },
-        { name:'parse_dictionary',
-          params:['data:Dictionary'],
-                desc:"" },
-        { name:'define_hitbox',
-          params:['name:String', 'data', 'force_new:bool=false'],
-                desc:"" },
-        { name:'set_visible',
-          params:['value:bool'],
-                desc:"" },
-        { name:'get_visible',
-          params:[], type:'bool',
-                desc:"" },
-        { name:'set_interrupt_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_interrupt_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_projectile_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_projectile_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_start_armor_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_start_armor_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_end_armor_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_end_armor_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_start_invulnerability_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_start_invulnerability_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_end_invulnerability_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_end_invulnerability_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_start_projectile_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_start_projectile_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_end_projectile_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_end_projectile_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_start_grab_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_start_grab_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_end_grab_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_end_grab_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_start_aerial_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_start_aerial_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_end_aerial_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_end_aerial_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_start_grounded_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_start_grounded_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_end_grounded_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'unset_end_grounded_invuln_tick',
-          params:['tick:int'],
-                desc:"" },
-        { name:'set_gimmick_tick',
-          params:['tick:int', 'text:String'],
-                desc:"" },
-        { name:'unset_gimmick_tick',
-          params:['tick:int', 'text:String'],
-                desc:"" },
-        { name:'set_gimmick_tick_range',
-          params:['start:int', 'end:int', 'text:String'],
-                desc:"" },
-        { name:'set_tick_item',
-          params:['tick:int', 'type:String'],
-                desc:"" },
-        { name:'unset_tick_item',
-          params:['tick:int', 'type:String'],
-                desc:"" },
-        { name:'parse_source_script',
-          params:['source_code:String'],
-                desc:"" },
-        { name:'apply_known_script',
-          params:['path:String'],
-                desc:"" },
-        { name:'script_has_keyphrase',
-          is_static:true, params:['haystack:String', 'needle:String'], type:'bool',
-                desc:"" },
-    ],
-};
 
 
-    Vue.createApp(ClassDocsComponent, data).mount("#page_main");
-</script>
+
+---
+## Property Descriptions
+
+### var icon
+- var icon : Texture = null
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var title
+- var title : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var desc
+- var desc : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var visible
+- var visible : bool = true
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var visibility_set
+- var visibility_set : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var type
+- var type : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var air_type
+- var air_type : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var length
+- var length : int = -1
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var endless
+- var endless : bool = false
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var iasa
+- var iasa : int = -1
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var anim_name
+- var anim_name : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var interrupt_types
+- var interrupt_types : Array = []
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var stances
+- var stances : Array = []
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var tags
+- var tags : Array = []
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var change_stance
+- var change_stance : String = ""
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var super_req
+- var super_req : int = 0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var super_cost
+- var super_cost : int = 0
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var hitbox_data
+- var hitbox_data : Dictionary = {}
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var tick_data
+- var tick_data : Dictionary = {}
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### var custom_stats
+- var custom_stats : Dictionary = {}
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+
+---
+## Method Descriptions
+
+### func _init
+- func _init(state=null)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func define
+- func define(data=null)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func duplicate
+- func duplicate() -> CodexState
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func copy_to
+- func copy_to(copy)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func duplicate_all_hitbox_data
+- func duplicate_all_hitbox_data() -> Dictionary
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func parse_state
+- func parse_state(state:StateInterface)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func parse_dictionary
+- func parse_dictionary(data:Dictionary)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func define_hitbox
+- func define_hitbox(name:String, data, force_new:bool=false)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_visible
+- func set_visible(value:bool)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func get_visible
+- func get_visible() -> bool
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_interrupt_tick
+- func set_interrupt_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_interrupt_tick
+- func unset_interrupt_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_projectile_tick
+- func set_projectile_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_projectile_tick
+- func unset_projectile_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_start_armor_tick
+- func set_start_armor_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_start_armor_tick
+- func unset_start_armor_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_end_armor_tick
+- func set_end_armor_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_end_armor_tick
+- func unset_end_armor_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_start_invulnerability_tick
+- func set_start_invulnerability_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_start_invulnerability_tick
+- func unset_start_invulnerability_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_end_invulnerability_tick
+- func set_end_invulnerability_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_end_invulnerability_tick
+- func unset_end_invulnerability_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_start_projectile_invuln_tick
+- func set_start_projectile_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_start_projectile_invuln_tick
+- func unset_start_projectile_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_end_projectile_invuln_tick
+- func set_end_projectile_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_end_projectile_invuln_tick
+- func unset_end_projectile_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_start_grab_invuln_tick
+- func set_start_grab_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_start_grab_invuln_tick
+- func unset_start_grab_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_end_grab_invuln_tick
+- func set_end_grab_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_end_grab_invuln_tick
+- func unset_end_grab_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_start_aerial_invuln_tick
+- func set_start_aerial_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_start_aerial_invuln_tick
+- func unset_start_aerial_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_end_aerial_invuln_tick
+- func set_end_aerial_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_end_aerial_invuln_tick
+- func unset_end_aerial_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_start_grounded_invuln_tick
+- func set_start_grounded_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_start_grounded_invuln_tick
+- func unset_start_grounded_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_end_grounded_invuln_tick
+- func set_end_grounded_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_end_grounded_invuln_tick
+- func unset_end_grounded_invuln_tick(tick:int)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_gimmick_tick
+- func set_gimmick_tick(tick:int, text:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_gimmick_tick
+- func unset_gimmick_tick(tick:int, text:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_gimmick_tick_range
+- func set_gimmick_tick_range(start:int, end:int, text:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func set_tick_item
+- func set_tick_item(tick:int, type:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func unset_tick_item
+- func unset_tick_item(tick:int, type:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func parse_source_script
+- func parse_source_script(source_code:String)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func apply_known_script
+- func apply_known_script(path:String, state)
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+### func script_has_keyphrase
+- func script_has_keyphrase(haystack:String, needle:String) -> bool
+
+[](https://hustledocs.trimaydev.com/docs/missing-description.md ':include')
+
+
+
+
