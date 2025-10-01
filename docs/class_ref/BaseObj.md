@@ -227,7 +227,7 @@ let data = {
                 desc:"" },
         { name:'objs_map',
           type:'Dictionary', value:'{}',
-                desc:"" },
+                desc:"A list of all objects spawned during a game. Starts off only containing the fighter objects as 'P1' and 'P2', then every other object as '3', '4', etc." },
         { name:'sounds',
           type:'Dictionary', value:'{}',
                 desc:"" },
@@ -686,3 +686,4 @@ let data = {
     Vue.createApp(ClassDocsComponent, data).mount("#page_main");
 
 </script>
+
