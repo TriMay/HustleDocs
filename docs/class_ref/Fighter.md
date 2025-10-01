@@ -782,7 +782,7 @@ let data = {
                 desc:"" },
         { name:'copy_to',
           params:['f'],
-                desc:"" },
+                desc:"See BaseObj's copy_to description" },
         { name:'gain_burst',
           params:[],
                 desc:"" },
@@ -1151,5 +1151,6 @@ let data = {
 
 
 Vue.createApp(ClassDocsComponent, data).mount("#page_main");
+
 
 </script>
