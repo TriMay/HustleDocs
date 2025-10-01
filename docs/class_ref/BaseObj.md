@@ -478,7 +478,7 @@ let data = {
                 desc:"" },
         { name:'set_pos',
           params:['x', 'y'], type:'UNKNOWN_TYPE',
-                desc:"" },
+                desc:"Sets an object's position relative to the stage. For setting position relative to the object, see move_directly" },
         { name:'set_snap_to_ground',
           params:['snap:bool'],
                 desc:"" },
@@ -541,10 +541,10 @@ let data = {
                 desc:"" },
         { name:'move_directly',
           params:['x', 'y'], type:'UNKNOWN_TYPE',
-                desc:"" },
+                desc:"Sets an object's position relative to itself. For setting position relative to the stage, see set_pos" },
         { name:'move_directly_relative',
           params:['x', 'y'], type:'UNKNOWN_TYPE',
-                desc:"" },
+                desc:"Same as move_directly, except relative to the object's facing, positive will always be forward, negative will always be backward" },
         { name:'_process',
           params:['delta'],
                 desc:"" },
@@ -686,4 +686,5 @@ let data = {
     Vue.createApp(ClassDocsComponent, data).mount("#page_main");
 
 </script>
+
 
