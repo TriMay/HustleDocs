@@ -316,7 +316,7 @@ let data = {
                 desc:"" },
         { name:'copy_to',
           params:['o:BaseObj'],
-                desc:"" },
+                desc:"Used for copying property values from an object to its prediction ghost" },
         { name:'get_frames',
           params:[], type:'UNKNOWN_TYPE',
                 desc:"" },
@@ -684,4 +684,5 @@ let data = {
 };
 
     Vue.createApp(ClassDocsComponent, data).mount("#page_main");
+
 </script>
